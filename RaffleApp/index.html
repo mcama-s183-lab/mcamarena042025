@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Raffle Prize Draw</title>
+<style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: #f9f9f9;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  .container {
+    margin-top: 20px;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    background: #fff;
+    margin-bottom: 6px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  .section-title {
+    margin-top: 25px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  #winner {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0b7a0b;
+    text-align: center;
+    min-height: 1.5em;
+  }
+</style>
+</head>
+<body>
+
+<h1>Raffle Prize Draw</h1>
+
+<div>
+  <input type="text" id="nameInput" placeholder="Enter participant name" />
+  <button id="addBtn">Add</button>
+</div>
+
+<div class="container">
+  <div class="section-title">Participants</div>
+  <ul id="participantsList"></ul>
+</div>
+
+<div style="text-align:center; margin-top: 15px;">
+  <button id="drawBtn" disabled>Draw Winner</button>
+  <button id="resetBtn">Reset</button>
+</div>
+
+<div id="winner"></div>
+
+<div class="container">
+  <div class="section-title">Winners</div>
+  <ul id="winnersList"></ul>
+</div>
+
+<script>
+  const nameInput = document.getElementById('nameInput');
+  const addBtn = document.getElementById('addBtn');
+  const participantsList = document.getElementById('participantsList');
+  const drawBtn = document.getElementById('drawBtn');
+  const winnersList = document.getElementById('winnersList');
+  const winnerDisplay = document.getElementById('winner');
+  const resetBtn = document.getElementById('resetBtn');
+
+  let participants = [];
+  let winners = [];
+
+  // Add participant
+  function addParticipant() {
+    const name = nameInput.value.trim();
+    if(name && !participants.includes(name) && !winners.includes(name)) {
+      participants.push(name);
+      updateParticipantsList();
+      nameInput.value = '';
+      drawBtn.disabled = participants.length === 0;
+    }
+  }
+
+  // Update participants list UI
+  function updateParticipantsList() {
+    participantsList.innerHTML = '';
+    participants.forEach(name => {
+      const li = document.createElement('li');
+      li.textContent = name;
+      participantsList.appendChild(li);
+    });
+  }
+
+  // Update winners list UI
+  function updateWinnersList() {
+    winnersList.innerHTML = '';
+    winners.forEach(name => {
+      const li = document.createElement('li');
+      li.textContent = name;
+      winnersList.appendChild(li);
+    });
+  }
+
+  // Draw winner
+  function drawWinner() {
+    if(participants.length === 0) {
+      winnerDisplay.textContent = 'No participants left to draw.';
+      drawBtn.disabled = true;
+      return;
+    }
+    const randomIndex = Math.floor(Math.random() * participants.length);
+    const winner = participants.splice(randomIndex, 1)[0];
+    winners.push(winner);
+    winnerDisplay.textContent = `Winner: ${winner}`;
+    updateParticipantsList();
+    updateWinnersList();
+    drawBtn.disabled = participants.length === 0;
+  }
+
+  // Reset everything
+  function resetAll() {
+    participants = [];
+    winners = [];
+    updateParticipantsList();
+    updateWinnersList();
+    winnerDisplay.textContent = '';
+    drawBtn.disabled = true;
+    nameInput.value = '';
+  }
+
+  addBtn.addEventListener('click', addParticipant);
+  nameInput.addEventListener('keypress', e => {
+    if(e.key === 'Enter') addParticipant();
+  });
+  drawBtn.addEventListener('click', drawWinner);
+  resetBtn.addEventListener('click', resetAll);
+</script>
+
+</body>
+</html>

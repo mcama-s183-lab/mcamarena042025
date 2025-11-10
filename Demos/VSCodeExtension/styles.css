@@ -1,0 +1,17 @@
+/* This is a CSS comment */
+/* ? question comment */
+/* ! alert comment */
+/* *regular comment (different green) */
+
+body{
+    background-color: blanchedalmond;
+}
+
+h1{
+    color: navy;
+    background-color: white;
+    padding: 1rem;}
+
+ul{
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,93 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+
+
+
+body{
+background-color: #042867;
+}
+#pageheader{
+    background-color: #00668D;
+    min-height: auto;
+    padding: 1rem;
+}
+#logo{
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: none;
+    background-image: url(Images/portfoliologosmall.png);
+}
+
+#pageheader .container{
+    background-color: none;
+    min-height: auto;
+    text-align: center;
+}
+
+.container{
+    min-height: 10rem;
+    max-width: 75rem;
+    margin: auto;
+    background-color: white;
+    padding: 1rem;
+}
+
+#media{
+    background-color: #ffa5af;
+    min-height: 10rem;
+    padding: 1rem;
+    background-image: url(Images/oceanimage.png);
+    background-size: cover;
+    aspect-ratio: 16 / 9;
+}
+
+#career{
+    background-color: #00b4b6;
+    min-height: 10rem;
+    padding: 1rem;
+}
+
+#pagecontent{
+    background-color: #d8a594;
+    min-height: 10rem;
+    padding: 1rem;
+}
+
+#semester1{
+    background-color: #7b2e24;
+    min-height: 10rem;
+    padding: 1rem;
+}
+
+#semester2{
+    background-color: rebeccapurple;
+    min-height: 10rem;
+    padding: 1rem;
+}
+
+#pagefooter{
+    background-color:rgb(24, 101, 101);
+    min-height: 10rem;
+    padding: 1rem;
+}
+#pagefooter .container{
+    background-color:antiquewhite;
+    text-align: center;
+    min-height: auto
+}
+#subFooter{
+    background-color:orchid;
+    min-height: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+audio {
+    display: block;
+    margin: auto;
+    background-color: cornflowerblue;
+    border: 5px solid skyblue;
+}
