@@ -21,10 +21,31 @@ background-color: #042867;
     background-image: url(Images/portfoliologosmall.png);
 }
 
+
 #pageheader .container{
-    background-color: none;
     min-height: auto;
+}
+
+#pageheader nav {
     text-align: center;
+}
+
+#pageheader nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#pageheader nav ul li{
+    border: 2px solid silver;
+    padding: 1rem;
+    background-color: #ffa5af;
+    margin: 2px;
+    border-radius: ;
+}
+
+#pageheader nav ul li:hover{
+    background-color: #00b4b6;
 }
 
 .container{
@@ -56,6 +77,26 @@ background-color: #042867;
     padding: 1rem;
 }
 
+blockquote{
+    background-color: none;
+    padding: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: steelblue;
+}
+
+blockquote + span{
+    background-color: none;
+    padding: 1rem;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 1.25rem;
+}
+
 #semester1{
     background-color: #7b2e24;
     min-height: 10rem;
@@ -78,6 +119,17 @@ background-color: #042867;
     text-align: center;
     min-height: auto
 }
+
+#aifooter{
+    background-color: seashell;
+    padding: 1em;
+    min-height: auto;
+}
+
+#aifooter .container{
+    text-align: center;
+    min-height: auto;
+}
 #subFooter{
     background-color:orchid;
     min-height: auto;
@@ -90,4 +142,40 @@ audio {
     margin: auto;
     background-color: cornflowerblue;
     border: 5px solid skyblue;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (min-width:600px) {
+
+    #pageheader nav ul{
+        background-color: none;
+        margin-top: 2rem;
+}
+
+    #pageheader nav ul li{
+        display: inline-block;
+    }
+
+    #pagecontent
+    {
+        background-color: red;
+    }
+
+    #career {
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width:1000px)
+{
+    #pagecontent
+    {
+        background-color:blue
+        ;
+    }
+
+    #career {
+        background-color: red;
+    }
 }
