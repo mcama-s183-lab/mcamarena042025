@@ -24,11 +24,47 @@
 
         .card {
             border: 1px solid #ccc;
+            background-color: cadetblue;
             width: 200px;
             padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 5px;
         }
+    </style>
+    <style>
+        #buttons {
+            border: 2px solid blue;
+            padding: 1rem;
+            background-color:royalblue ;
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #list{
+            background-color: lightblue;
+            border: 1px solid skyblue;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+        }
+
+        #cards{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #linklists{
+            background-color: aqua;
+            border: 1px solid royalblue;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1rem;
+        }
+
     </style>
 </head>
 
@@ -44,33 +80,43 @@
     </ul>
 
     <h2>Buttons</h2>
-    <button type="button">Button 1</button>
-    <button type="button">Button 2</button>
-    <button type="button">Button 3</button>
-    <button type="button">Button 4</button>
-    <button type="button">Button 5</button>
 
-    <h2>Cards</h2>
-    <div class="card">
-        <h3>Card Title 1</h3>
-        <p>This is a description for card 1.</p>
-    </div>
-    <div class="card">
-        <h3>Card Title 2</h3>
-        <p>This is a description for card 1.</p>
-    </div>
-    <div class="card">
-        <h3>Card Title 3</h3>
-        <p>This is a description for card 1.</p>
+    <div id="buttons">
+        <button type="button">Button 1</button>
+        <button type="button">Button 2</button>
+        <button type="button">Button 3</button>
+        <button type="button">Button 4</button>
+        <button type="button">Button 5</button>
     </div>
 
-    <h2>Link Lists</h2>
-    <ul>
-        <li><a href="https://google.com/">Google</a></li>;
-        <li><a href="https://google.com/">Google</a></li>;
-        <li><a href="https://google.com/">Google</a></li>;
-        <li><a href="https://google.com/">Google</a></li>;
-    </ul>
+   <h2>Cards</h2>
+<div id="cards">
+     
+        <div class="card">
+            <h3>Card Title 1</h3>
+            <p>This is a description for card 1.</p>
+        </div>
+        <div class="card">
+            <h3>Card Title 2</h3>
+            <p>This is a description for card 1.</p>
+        </div>
+        <div class="card">
+            <h3>Card Title 3</h3>
+            <p>This is a description for card 1.</p>
+        </div>
+</div>
+
+<h2>Link Lists</h2>
+
+    
+            <ul id="linklists">
+                <li><a href="https://google.com/">Google</a></li>
+                <li><a href="https://google.com/">Google</a></li>
+                <li><a href="https://google.com/">Google</a></li>
+                <li><a href="https://google.com/">Google</a></li>
+            </ul>
+        
+    
 </body>
 
 </html>
