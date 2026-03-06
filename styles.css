@@ -4,8 +4,6 @@ html
 }
 
 
-
-
 body{
 background-color: #042867;
 }
@@ -37,7 +35,7 @@ background-color: #042867;
 }
 
 #pageheader nav ul li{
-    border: 2px solid silver;
+    border: 2px solid deeppink;
     padding: 1rem;
     background-color: #ffa5af;
     margin: 2px;
@@ -98,7 +96,7 @@ blockquote + span{
 }
 
 #semester1{
-    background-color: #7b2e24;
+    background-color: lightyellow;
     min-height: 10rem;
     padding: 1rem;
 }
@@ -159,7 +157,7 @@ audio {
 
     #pagecontent
     {
-        background-color: red;
+        background-color: lightcoral;
     }
 
     #career {
@@ -171,11 +169,10 @@ audio {
 {
     #pagecontent
     {
-        background-color:blue
-        ;
+        background-color:lightskyblue;
     }
 
     #career {
-        background-color: red;
+        background-color: lightcoral;
     }
 }
